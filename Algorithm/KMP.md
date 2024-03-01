@@ -5,14 +5,14 @@ $S$ 为字符串（长串) $P$ 为模式串，所有字符串中只包含大小�
 ## **朴素做法**
 
 ```c++
-for(int i = 1; i <= n; i ++)
+for (int i = 1; i <= n; i ++ )
 {
     bool flag = true;
-    for(int j = 1; j <= m; j ++)
+    for (int j = 1; j <= m; j ++ )
     {
-		if(s[i] != p[j])
+        if (s[i + j - 1] != p[j])
         {
-			flag = false;
+            flag=false;
             break;
         }
     }
@@ -52,44 +52,46 @@ $next[i] = j$
 $p[1, j] = p[i - j + 1, i]$
 
 ```c++
-#include<iostream>
+#include<bits/stdc++.h>
 
 using namespace std;
 
-const int N = 10010, M = 100010;
+const int N = 100010, M = 1000010;
 
 int n, m;
 char p[N], s[M];
-int ne[N];
+int ne[N]; // 表示 P[1~i] 中最长的与前缀相等的后缀
 
 int main()
 {
     cin >> n >> p + 1 >> m >> s + 1;
 
-    //求 ne[] 过程
+    // ne[1] = 0; 匹配失败往后退，退到零
     for(int i = 2, j = 0; i <= n; i ++)
     {
-        while(j && p[i] != p[j + 1]) j = ne[j];
-        if(p[i] == p[j + 1]) j ++;
+        while(j && p[i] != p[j + 1])
+        {
+            j = ne[j];
+        }
+
+        if(p[i] == p[j + 1])
+            j ++;
+        
         ne[i] = j;
     }
 
-    //kmp 匹配过程
     for(int i = 1, j = 0; i <= m; i ++)
     {
-        //如果不匹配，移动到下一个至少能匹配的位置
-        while(j && s[i] != p[j + 1]) j = ne[j];
-        //如果字母匹配
-        if(s[i] == p[j + 1]) j ++;
-        //说明模式串在字符串中出现
+        while(j && s[i] != p[j + 1])
+            j = ne[j];
+        if(s[i] == p[j + 1])
+            j ++;
         if(j == n)
         {
-            printf("%d ", i - n);
+            cout << i - n << " ";
             j = ne[j];
         }
     }
-
-    return 0;
-} 
+}
 ```
 
