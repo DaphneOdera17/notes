@@ -1,0 +1,259 @@
+## 安装 $ccache$
+$ccache~ - ~a ~fast ~C/C++ ~compiler ~cache$
+> It [speeds up recompilation](https://ccache.dev/performance.html) by caching previous compilations and detecting when the same compilation is being done again.
+
+$which$ 命令可以搜索 $PATH 环境变量中的路径列表，并输出指定为参数的命令的完整路径。
+![image.png](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240327201542.png)
+他只有一个可选参数 $-a$，用于指示它打印所有匹配项
+通过以下指令获得的默认路径为 /usr/bin/gcc
+```shell
+which gcc
+```
+
+安装 $ccache$
+```shell
+sudo apt-get install ccache
+```
+我们需要阅读 $man~ccache$ 中的手册，来将 /usr/bin/gcc 改为 /usr/lib/ccache/gcc
+![image.png](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240327203122.png)
+手册提示我们需要将 /usr/lib/ccache 添加到我们的环境变量中。
+```shell
+vim ~/.bashrc
+```
+在最下方一行添加 
+```shell
+export PATH="/usr/lib/ccache:$PATH"
+```
+![image.png](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240327203645.png)
+
+再保存退出。
+输入
+```shell
+source ~/.bashrc
+```
+使其生效。此时再输入
+```shell
+which gcc
+```
+![image.png](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240327203757.png)
+发现 gcc 的路径已经发生了变化。
+
+在 /am-kernels/tests/am-tests 目录下。清除原先的编译结果，再次编译。并用 time 测量时间。
+```shell
+make clean
+time make ARCH=native mainargs=k run
+```
+发现编译时间反而比之前慢了。
+> 这是因为除了需要开展正常的编译工作之外, `ccache`还需要花时间把目标文件存起来. 接下来再次清除编辑结果, 重新编译并统计时间, 你会发现第二次编译的速度有了非常明显的提升! 这说明`ccache`确实跳过了完全重复的编译过程, 发挥了加速的作用. 如果和多线程编译共同使用, 编译速度还能进一步加快!
+![image.png](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240327204015.png)
+
+再次清除编译结果，然后进行编译。发现速度变快了许多。
+![image.png](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240327203945.png)
+
+
+## ISA 指令集架构
+> In [computer science](https://en.wikipedia.org/wiki/Computer_science "Computer science"), an **instruction set architecture** (**ISA**) is a part of the [abstract model](https://en.wikipedia.org/wiki/Abstract_model) of a [computer](https://en.wikipedia.org/wiki/Computer "Computer"), which generally defines how software controls the CPU.[[1]](https://en.wikipedia.org/wiki/Instruction_set_architecture#cite_note-1) A device that executes instructions described by that ISA, such as a [central processing unit](https://en.wikipedia.org/wiki/Central_processing_unit "Central processing unit") (CPU), is called an _implementation_.
+
+ISA 类似于一种规范：
+如果一个程序要在特定架构的计算机上运行, 那么这个程序和计算机就必须是符合同一套规范才行。
+
+$x86$
+$riscv32(64)$
+$mips32$
+
+## man
+CR 代表回车
+```shell
+man -k printf
+```
+可以打印出所有候选参数
+![image.png](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240327214512.png)
+再通过
+```shell
+man 3 printf
+```
+可以查看它的 manual page
+
+
+将计算机看成是一个先驱制造的。先驱制造计算机，首先需要程序的存储位置，而这个存储部件需要存储足够大容量来放下各种各样的程序，他就是存储器。先驱制造存储器并且把程序放在存储器中等待CPU执行。
+
+
+$MakeFile$
+$\$@$:
+> 	The file name of the target of the rule. If the target is an archive member, then ‘$@’ is the name of the archive file. In a pattern rule that has multiple targets (see [Introduction to Pattern Rules](https://www.gnu.org/software/make/manual/html_node/Pattern-Intro.html)), ‘$@’ is the name of whichever target caused the rule’s recipe to be run.
+$\$<$
+> 	The name of the first prerequisite. If the target got its recipe from an implicit rule, this will be the first prerequisite added by the implicit rule (see [Using Implicit Rules](https://www.gnu.org/software/make/manual/html_node/Implicit-Rules.html)).
+
+
+接下来就是让笔者最痛苦的阅读源码环节（C语言基础不是特别好）。至少阅读几个“简单的”初始化函数也需要花费大量时间。
+### $parse\_agrs$
+$getopt$ 获取命令
+"ab:c" 是 optstring。: 代表需要一个参数，:: 代表可选的参数。
+"a:b:c:" 代表 a, b, c 都需要一个参数。
+```cpp
+/* getopt */
+#include <unistd.h>
+extern char *optarg;
+extern int optind;
+extern int optopt;
+extern int opterr;
+extern int optreset;
+int getopt(int argc, char * const *argv, const char *optstring);
+```
+
+```c
+/* getopt.c */
+#include <unistd.h>
+#include <stdio.h>
+int main(int argc, char * argv[])
+{
+    int aflag=0, bflag=0, cflag=0;
+    int ch;
+    while ((ch = getopt(argc, argv, "ab:c")) != -1)
+    {
+        printf("optind: %d\n", optind);
+        switch (ch) {
+        case 'a':
+            printf("HAVE option: -a\n");
+            aflag = 1;
+            break;
+        case 'b':
+            printf("HAVE option: -b\n");
+            bflag = 1;
+            printf("The argument of -b is %s\n", optarg);
+            break;
+        case 'c':
+            printf("HAVE option: -c");
+            cflag = 1;
+            break;
+        case '?':
+            printf("Unknown option: %c\n",(char)optopt);
+            break;
+        }
+    }
+}
+```
+运行效果如图：
+![image.png](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240328205948.png)
+![image.png](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240328210011.png)
+![image.png](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240328210033.png)
+
+$getopt\_long$ 获取长参数
+```c
+const struct option table[] = {
+    {"batch"    , no_argument      , NULL, 'b'},
+    {"log"      , required_argument, NULL, 'l'},
+    {"diff"     , required_argument, NULL, 'd'},
+    {"port"     , required_argument, NULL, 'p'},
+    {"help"     , no_argument      , NULL, 'h'},
+    {0          , 0                , NULL,  0 },
+  };
+```
+对于 option 
+```cpp
+struct option{
+      const char *name;
+      int has_arg;
+      int *flag;
+      int val;
+ };
+```
+如果 flag 为 NULL,  getopt_long() 返回 val 中数值。
+
+--batch -> -b
+
+### $init\_rand()$
+```c
+void init_rand() {
+  srand(MUXDEF(CONFIG_TARGET_AM, 0, time(0)));
+}
+```
+time() 参数为 0 或者 NULL 是取系统时间
+```c
+/* nemu>include>common.h */
+typedef MUXDEF(CONFIG_ISA64, uint64_t, uint32_t) word_t;
+typedef MUXDEF(CONFIG_ISA64, int64_t, int32_t)  sword_t;
+```
+
+### $init\_log(log\_file)$
+```c
+void init_log(const char *log_file) {
+  log_fp = stdout;
+  if (log_file != NULL) {
+    FILE *fp = fopen(log_file, "w");
+    Assert(fp, "Can not open '%s'", log_file);
+    log_fp = fp;
+  }
+  Log("Log is written to %s", log_file ? log_file : "stdout");
+}
+```
+stdout 定义在 <stdio.h> 中
+```c
+/* Standard streams.  */
+extern FILE *stdin;		/* Standard input stream.  */
+extern FILE *stdout;		/* Standard output stream.  */
+extern FILE *stderr;		/* Standard error output stream.  */
+/* C89/C99 say they're macros.  Make them happy.  */
+#define stdin stdin
+#define stdout stdout
+#define stderr stderr
+```
+stdout 相当于是向屏幕输出，默认行缓冲，遇到 $\n$ 才会输出
+[fflush stdin stdout stderr](https://blog.csdn.net/tonglin12138/article/details/85546563)
+
+$init\_mem()$
+个人注释：
+```c
+void init_mem() {
+#if   defined(CONFIG_PMEM_MALLOC)
+  pmem = malloc(CONFIG_MSIZE);  // 给 memory 分配空间
+  assert(pmem); 
+#endif
+#ifdef CONFIG_MEM_RANDOM
+  uint32_t *p = (uint32_t *)pmem; // p 指针指向 memory 所在位置
+  int i;
+  for (i = 0; i < (int) (CONFIG_MSIZE / sizeof(p[0])); i ++) {
+    p[i] = rand(); // 随机分配 memory 物理地址？
+  }
+#endif
+  Log("physical memory area [" FMT_PADDR ", " FMT_PADDR "]", PMEM_LEFT, PMEM_RIGHT);
+}
+```
+为什么 pmem 为 uint8_t 要转化为 uint32_t ?
+chatgpt 的回答：
+![image.png](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240328214557.png)
+
+运行 make run 报错
+![image.png](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240328222121.png)
+PA0 提示实在 nemu\src\monitor\monitor.c 的 36 行触发了断言错误
+![image.png](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240328230521.png)
+将 Log 和 assert 两行注释掉。
+![image.png](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240328230657.png)
+我们再进行 make run
+发现错误提示消失。
+
+
+```c
+void cpu_exec(uint64_t n)
+```
+
+### $Q$ 向 $cpu\_exec$ 函数传入参数 $-1$ 是什么意思
+uint64_t 是 64 位无符号整数
+$uint64\_t.min=0$
+$uint64\_t.max=18446744073709551615$
+如果传入 $-1$，相当于在有符号的情况下二进制数全为 $1$。因此，他表示无符号的 $uint64\_t$ 的最大值。
+传入 $-1$ 是想让它近乎无限执行下去???
+
+### 为 NEMU 编译添加 GDB 调试信息
+![image.png](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240401213259.png)
+
+![image.png](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240401213334.png)
+
+
+
+> 为了测试大家是否已经理解框架代码, 我们给大家设置一个练习: 如果在运行NEMU之后直接键入`q`退出, 你会发现终端输出了一些错误信息. 请分析这个错误信息是什么原因造成的, 然后尝试在NEMU中修复它.
+![image.png](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240401213642.png)
+
+sdb.c 中
+![image.png](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240401215444.png)
+

@@ -7,7 +7,7 @@ hexo new "name"
 
 
 ```shell
-hexo c && hexo g && hexo d 
+hexo clean && hexo g && hexo d 
 ```
 
 

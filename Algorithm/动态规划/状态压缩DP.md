@@ -235,6 +235,7 @@ $dp[i][j][S2] += dp[i - 1][j - cnt[S2]][S1]$
 
 $cnt[S2]$ 表示 $S2$ 在二进制下有几个 $1$
 
+
 ## 	**最短Hamilton路径**
 
 ![image-20231006131134512](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/image-20231006131134512.png)
@@ -247,4 +248,45 @@ $cnt[S2]$ 表示 $S2$ 在二进制下有几个 $1$
 ```
 
 $i$ 是一个二进制数，例如 $(1110011)_{b}$，哪个点是 $1$ 就代表走过
+
+分类：倒数第二个点为哪个点
+![image.png](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240323093445.png)
+假设为点 k 
+那么就是从 0 -> k -> j 
+从 k 到 j 走的路径固定。要求从 0 到 j 最短， 也就是求从 0 到 k
+$f[0, j] = f[i - {j}, k] + a[k, j]$
+
+```cpp
+#include<bits/stdc++.h>
+
+using namespace std;
+
+const int N = 20, M = 1 << N;
+
+int n;
+int w[N][N];
+int f[M][N];
+
+int main()
+{
+    cin >> n;
+    for(int i = 0; i < n; i ++)
+        for(int j = 0; j < n; j ++)
+            cin >> w[i][j];
+    
+    memset(f, 0x3f, sizeof f);
+    f[1][0] = 0;
+    for(int i = 0; i < 1 << n; i ++)
+        for(int j = 0; j < n; j ++)
+            if(i >> j & 1) // 路径包含 j 这个点
+                for(int k = 0; k < n; k ++)
+                    if((i - (1 << j)) >> k & 1) // 包含 k 这个点
+                        f[i][j] = min(f[i][j], f[i - (1 << j)][k] + w[k][j]);
+                            // [i - (1 << j)] 表示 j 未走过
+    
+    cout << f[(1 << n) - 1][n - 1] << endl; // (1 << n) - 1 是因为一开始就为 1，要除掉
+
+    return 0;
+}
+```
 

@@ -1,6 +1,5 @@
 
-
-
+### 石子合并
 
 ```mermaid
  graph LR;
@@ -21,15 +20,47 @@
 
 则最小代价是 $f[i,j] = Min(f[i,m] + f[m+1,j] + s[j] -s[i-1])$
 
-$s[j] -s[i-1]$ 为区间 $[i,j]$ 中石子重量的总和
+$s[j] -s[i-1]$ 为区间 $[i,j]$ 中石子重量的总和(前缀和)
 
 $m ∈ (i, j)$
 
 $DP$ 两维 $n^2$，又因为要枚举 $k$ 所以时间复杂度 $O(n^2\times n) =O(n^3)$
 
+```cpp
+#include<bits/stdc++.h>
 
+using namespace std;
 
+const int N = 350;
 
+int f[N][N];
+int n;
+int a[N];
+
+int main()
+{
+    cin >> n;
+
+    for(int i = 1; i <= n; i ++)
+    {
+        cin >> a[i];
+        a[i] += a[i - 1];
+    }
+
+    for(int len = 2; len <= n; len ++)
+        for(int i = 1; i + len - 1 <= n; i ++)
+        {
+            int l = i, r = i + len - 1;
+            f[l][r] = 1e9;
+            for(int k = l; k < r; k ++)
+                f[l][r] = min(f[i][r], f[i][k] + f[k + 1][r] + a[r] - a[l - 1]);
+        }
+
+    cout << f[1][n] << endl;
+
+    return 0;
+}
+```
 
 ## [蓝桥杯 2016 省 A] 密码脱落
 

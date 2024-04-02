@@ -1,5 +1,3 @@
-[TOC]
-
 # **线性DP**
 
 ```mermaid
@@ -226,8 +224,43 @@ for (int i = lisLength - 1; i >= 0; i--)
 
 #### 时间复杂度$O(logn)$
 
-```
+```cpp
+#include<bits/stdc++.h>
 
+using namespace std;
+
+const int N = 100010;
+
+int n;
+int a[N];
+int q[N];
+
+int main()
+{
+    cin >> n;
+
+    for(int i = 0; i < n; i ++)
+        cin >> a[i];
+    int len = 0;
+    q[0] = -2e9;
+    for(int i = 0; i < n; i ++)
+    {
+        int l = 0, r = len;
+        while(l < r)
+        {
+            int mid = l + r + 1 >> 1;
+            if(q[mid] < a[i])
+                l = mid;
+            else r = mid - 1;
+        }
+        len = max(len, r + 1);
+        q[r + 1] = a[i];
+    }
+
+    cout << len << endl;
+
+    return 0;
+}
 ```
 
 
@@ -248,3 +281,95 @@ graph LR;
 分别对应 $a[i] ,b[j]$ 选或不选
 
 <img src="https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/image-20231006102113875.png" alt="image-20231006102113875" style="zoom:50%;" />
+f[i - 1, j] 与 f[i, j - 1] 实际上并不能正确表示，但是是包含在 f[i, j] 中的，所以直接去 max 就可以
+```cpp
+#include<bits/stdc++.h>
+
+using namespace std;
+
+const int N = 1050;
+
+int n, m;
+char a[N], b[N];
+int f[N][N];
+
+int main()
+{
+    cin >> n >> m;
+
+    scanf("%s%s", a + 1, b + 1);
+
+    for(int i = 1; i <= n; i ++)
+    {
+        for(int j = 1; j <= m; j ++)
+        {
+            f[i][j] = max(f[i - 1][j], f[i][j - 1]);
+            if(a[i] == b[j])
+            {
+                f[i][j] = max(f[i][j], f[i - 1][j - 1] + 1);
+            }
+        }
+    }
+
+    cout << f[n][m] << endl;
+    
+    return 0;
+}
+```
+
+## **最短截断距离**
+
+<img src="https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240317163638.png" style="zoom:50%;"/>
+```mermaid
+graph LR;
+	id1((动态规划)) --> 状态表示 --f[i] --> 集合 --> 所有将a1到ai变成b1到bj的操作方式
+	状态表示 --> 属性Min
+	id1((动态规划)) --> 状态计算
+```
+<img src="https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240317165929.png"  style="zoom:50%;">
+
+如果要删掉第 i 个数，那么前 i - 1 个数得与 b 中前 j 个数相同
+如果要添加一个数，那么最后添加的数应该和 b[j] 相同，添加前 a[1 ~ i] 与 b[1 ~ j - 1] 已经匹配
+如果要修改，应该把 a[i] 改成 b[j]。如果已经相等则不需要修改。前提是 a[1 ~ i - 1] 已经与 b[1 ~ j - 1] 匹配
+$f[i,j]=MIN(f[i-1,j]+1,f[i,j-1]+1,f[i-1,j-1]+1~or~0)$
+```cpp
+#include<bits/stdc++.h>
+
+using namespace std;
+
+const int N = 1050;
+
+int n, m;
+char a[N], b[N];
+int f[N][N];
+
+int main()
+{
+    scanf("%d%s", &n, a + 1);
+    scanf("%d%s", &m, b + 1);
+    
+    // a 长度为 0, 那么就是增加 b 的字符串长度次
+    for(int i = 0 ; i <= m; i ++)
+        f[0][i] = i;
+        
+    // b 长度为 0, 那么就是增加 a 的字符串长度次
+    for(int i = 0; i <= n; i ++)
+        f[i][0] = i;
+
+    for(int i = 1; i <= n; i ++)
+    {
+        for(int j = 1; j <= m; j ++)
+        {
+            f[i][j] = min(f[i - 1][j] + 1, f[i][j - 1] + 1);
+            if(a[i] == b[j])
+                f[i][j] = min(f[i][j], f[i - 1][j - 1]);
+            else
+                f[i][j] = min(f[i][j], f[i - 1][j - 1] + 1);
+        }
+	}
+  
+    cout << f[n][m] << endl;
+
+    return 0;
+}
+```
