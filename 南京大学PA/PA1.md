@@ -244,16 +244,168 @@ $uint64\_t.max=18446744073709551615$
 如果传入 $-1$，相当于在有符号的情况下二进制数全为 $1$。因此，他表示无符号的 $uint64\_t$ 的最大值。
 传入 $-1$ 是想让它近乎无限执行下去???
 
+### 用 GDB 调试 NEMU
+进入 gdb 调试界面
+```shell
+make gdb
+```
+在 gdb 界面输入以下指令进入图形化界面
+```shell
+layout split
+```
+![image.png](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240402165255.png)
+#### GDB常用指令
+```shell
+gdb  [file] //对具有调试信息的文件启动gdb调试
+quit //退出调试
+set args .. .. .. //对调试程序设置参数
+show args //获取参数
+show list/listsize //获取当前显示行数
+set list/listsize 行数 //设置每次显示行数
+set inferior-tty 进程id//设置不同进程的调试
+info inferiors //显示当前存在的所有进程和id
+show nferior-tty //显示当前调试进程
+
+l/list //从默认位置显示
+l/list 行号 //将指定行放到中间显示
+l/list 函数名 //将指定函数放到中间显示
+
+//查看非当前文件的代码
+list/l 文件名:行号
+list/ l文件名:函数名
+
+
+//设置断点
+b/break 行号
+b/break 函数名
+b/break 文件：行号
+b/break 文件：函数名
+
+i/info b/break //查看断点信息
+d/del/delete 断点编号//删除断点
+dis/disable 断点编号 //设置断点无效
+ena/enable 断点编号 //设置断点生效
+b/break 断点编号 if 条件 //设置条件断点
+
+//调试指令
+//运行
+start //程序停在第一行
+run //遇到断点才停
+
+//继续运行，遇到下一个断点停止
+c/continue
+
+//向下执行一行代码，不会进入函数
+n/next
+
+//向下单步调试
+s/step
+
+//跳出函数体
+finish
+
+//变量操作
+p/print 变量名 //打印变量值
+ptype 变量名 //打印变量类型
+display 变量名 //自动打印指定变量
+i/info display //查看自动变量信息
+undisplay 编号 //删除自动变量
+
+//循环相关
+set var 变量名=变量值
+until //跳出循环（前提是循环内没有断点了）
+```
+
 ### 为 NEMU 编译添加 GDB 调试信息
 ![image.png](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240401213259.png)
 
 ![image.png](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240401213334.png)
 
-
-
+### 实现优美的退出
 > 为了测试大家是否已经理解框架代码, 我们给大家设置一个练习: 如果在运行NEMU之后直接键入`q`退出, 你会发现终端输出了一些错误信息. 请分析这个错误信息是什么原因造成的, 然后尝试在NEMU中修复它.
 ![image.png](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240401213642.png)
 
-sdb.c 中
-![image.png](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240401215444.png)
 
+我们看 nemu_main.c 中的主函数
+![image.png](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240402162033.png)
+engine_start() 函数
+![image.png](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240402162912.png)
+sdb_mainloop() 可以接收用户的指令。
+
+sdb.c 中
+![image.png](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240402161657.png)
+![image.png](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240402161856.png)
+在 sdb_mainloop() 中有这么一段。可以发现如果键入 q，那么会 return(cmd_q() 返回 -1)
+![image.png](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240402161745.png)
+
+sdb_mainloop() 执行完之后， return 
+进入 is_exit_status_bad()
+![image.png](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240402163247.png)
+如果 good == 1，则程序正常退出。如果为 0，则程序错误退出。
+
+当然，如果打开 gdb 进行调试
+发现如果直接在 nemu 界面输入 q。
+程序会到 return is_exit_status_bad();
+![image.png](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240402172550.png)
+
+
+所以需要让 nemu_state.state = NEMU_QUIT。那么我们在输入为 q 键的时候让这个条件成立。
+在 cmd_q() 函数下添加
+![image.png](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240402164903.png)
+再次 make run
+输入 q 发现不会报错。
+![image.png](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240402165009.png)
+
+## $strtok()$
+[原文链接](https://www.runoob.com/cprogramming/c-function-strtok.html)
+函数声明：
+```c
+char *strtok(char *str, const char *delim)
+```
+str 代表要被分解成一组小字符串的字符串，delim 是包含分隔符的字符串
+(分割处理后原字符串 str 的分隔符会变成 '\0')
+
+在 cmd_help 函数中我们看到一行
+```c
+char *arg = strtok(NULL, " ");
+```
+stackoverflow 上 [why-do-we-use-null-in-strtok](https://stackoverflow.com/questions/23456374/why-do-we-use-null-in-strtok)
+他可以从上一次调用中未处理的字符串中继续查找
+
+## $sscanf()$
+[原文链接](https://www.runoob.com/cprogramming/c-function-sscanf.html)
+函数声明
+```c
+int sscanf(const char *str, const char *format, ...)
+```
+
+# 基础设施
+## 单步执行 $si~[N]$
+![image.png](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240402194422.png)
+在 cmd_table[] 里加上一行 
+![image.png](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240402195653.png)
+对于 cmd_si 函数的声明。由于如果缺参数，默认设置为 0，所以如果 args == NULL，那么令需要执行的指令数 n 为 1。否则用 sscanf 读取并存储到 n 变量中。使用 cpu_exec() 函数进行执行。
+```c
+static int cmd_si(char *args) {
+  int n;
+  if(args == NULL) {
+    n = 1;
+  }
+  else {
+    sscanf(args, "%d", &n);
+  }
+  cpu_exec(n);
+  return 0;
+}
+```
+在 risc32 中，指令长度为 4Byte
+执行一次，地址偏移 4Byte
+![image.png](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240402200619.png)
+
+## 打印程序状态
+![image.png](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240402201744.png)
+在 cmd_table[] 中添加
+```c
+{"info", "Print the state of program", cmd_info}
+```
+再创建函数 cmd_info(char \*args)

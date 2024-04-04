@@ -1,6 +1,3 @@
-
-[参考链接](https://zhuanlan.zhihu.com/p/584833753)
-
 打开 \_config.butterfly.yml
 找到 Beautify，将 enable 设置为 true，title-prefix-icon 设置为 '\f863'
 ```yaml
@@ -11,7 +8,6 @@ beautify:
     title-prefix-icon: '\f863' # '\f0c1'
     title-prefix-icon-color: "#F47466"
 ```
-
 在主题文件夹 source/css/ 中创建一个 icon.css
 内容如下：
 ```css
@@ -120,9 +116,11 @@ inject:
     bottom:
 ```
 
-最后
+最后三连
 ```shell
 hexo clean
 hexo g
 hexo d
 ```
+
+[参考链接](https://zhuanlan.zhihu.com/p/584833753)

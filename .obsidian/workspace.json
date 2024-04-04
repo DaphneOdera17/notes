@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "0114354c082f0e8f",
+        "id": "f21cd92160b2cfd0",
         "type": "tabs",
         "children": [
           {
-            "id": "39c992e8821d707f",
+            "id": "11a305f5d8320630",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algorithm/递归与递推.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 250.49999618530273,
-    "collapsed": true
+    "width": 250.49999618530273
   },
   "right": {
     "id": "4f69a03cb22f4551",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algorithm/递归与递推.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algorithm/递归与递推.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algorithm/递归与递推.md"
+                "file": "README.md"
               }
             }
           }
@@ -147,34 +146,35 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "39c992e8821d707f",
+  "active": "11a305f5d8320630",
   "lastOpenFiles": [
+    "css/盒子模型.md",
+    "css/优先级.md",
+    "Acryple适配指南.md",
+    "hexo/hexo 旋转小风车.md",
+    "hexo/hexo 添加樱花特效.md",
+    "hexo/hexo 博客.md",
+    "linux/tmux.md",
+    "Rust/Rust 的安装与配置.md",
+    "Git Bash.md",
+    "Ubuntu下的Vscode配置.md",
+    "Linux下Clash配置.md",
+    "GDB.md",
+    "Base64.md",
+    "状态机.md",
+    "未命名.md",
+    "解释器与编译器.md",
+    "css",
+    "南京大学PA/PA1.md",
+    "操作系统/C语言机制.md",
+    "南京大学PA/PA0-环境的配置.md",
+    "Bandit.md",
+    "hexo/hexo s-FATAL Permission denied. You can't use port 4000..md",
+    "hexo/hexo Valine 评论.md",
+    "Algorithm/递归与递推.md",
     "Algorithm/位运算.md",
     "Algorithm/搜索/BFS.md",
-    "南京大学PA/PA1.md",
     "Data Structure/复杂度.md",
-    "hexo/hexo主题.md",
-    "hexo/hexo github贡献日历.md",
-    "GDB.md",
-    "LateX.md",
-    "hexo/hexo 博客.md",
-    "一些快捷键.md",
-    "状态机.md",
-    "Bandit.md",
-    "Base64.md",
-    "解释器与编译器.md",
-    "README.md",
-    "Ubuntu下的Vscode配置.md",
-    "git.md",
-    "MakeFile.md",
-    "Linux下Clash配置.md",
-    "Git Bash.md",
-    "github.md",
-    "github-ssh.md",
-    "linux/vim 配置.md",
-    "linux/tmux.md",
-    "Algorithm/搜索/Flood Fill 算法.md",
-    "Algorithm/搜索/搜索.md",
     "Algorithm/搜索",
     "sakura 1.js",
     "sakura.js",

@@ -343,7 +343,6 @@ $cp~<source>~<destination>$ 复制文件
 $mv~<source>~<destination>$ 移动或者重命名文件
 
 
-
 $mktemp~-d$ 创建一个具有随机名称的文件夹
 
 ```shell
