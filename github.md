@@ -11,9 +11,5 @@ Host github.com
   Hostname ssh.github.com
   Port 443
 ```
-![image.png](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240319163811.png)
 
-```
-
-```
 

@@ -409,3 +409,30 @@ static int cmd_si(char *args) {
 {"info", "Print the state of program", cmd_info}
 ```
 再创建函数 cmd_info(char \*args)
+
+在 gdb 的图形化界面可以打印程序寄存器状态(运行时)
+```gdb
+info registers
+```
+或者用简写命令 "i r"
+
+也可以用
+```gdb
+layout regs
+```
+展示寄存器的图形化界面
+
+以下是 x86-64 架构下的寄存器和他对应的值。 0x 开头为 16 进制表示，最后一列为十进制表示。
+![image.png](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240409211934.png)
+在 riscv-32 中定义了
+![image.png](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240409212105.png)
+%#x 可以打印以 0x 开头的 16 进制数。
+```c
+void isa_reg_display() {
+  int length = ARRLEN(regs); // 获取数组的长度
+
+  for(int i = 0; i < length; i ++) {
+    printf("%-8s%-#20x%-20u\n", regs[i], cpu.gpr[i], cpu.gpr[i]);
+  }
+}
+```

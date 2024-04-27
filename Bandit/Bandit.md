@@ -1,45 +1,27 @@
-[TOC]
-
-
-
 # $Bandit$
-
 ## $Level~0$
-
 ```shell
 ssh -p 2220 bandit0@bandit.labs.overthewire.org
 ```
-
 然后再输入 $password$ 
-
 $bandit0$
-
 输入
-
 ```shell
 ls
 ```
-
 ![image-20231204110003599](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/image-20231204110003599.png)
-
 ```shell
 cat readme
 ```
-
 ![image-20231204110039079](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/image-20231204110039079.png)
-
 获取密码之后退出登录
-
 ```shell
 exit
 ```
-
 ## $Level~1$
-
 ```shell
 ssh -p 2220 bandit1@bandit.labs.overthewire.org
 ```
-
 复制粘贴 $level~0$ 的密码登入
 
 ![image-20231204110220752](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/image-20231204110220752.png)
@@ -337,14 +319,10 @@ cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
 ## $Level~13$
 
 $mkdir~<path>$ 创建新目录
-
 $cp~<source>~<destination>$ 复制文件
-
 $mv~<source>~<destination>$ 移动或者重命名文件
 
-
 $mktemp~-d$ 创建一个具有随机名称的文件夹
-
 ```shell
 cd /tmp
 mktemp -d
@@ -352,11 +330,8 @@ cd #相应的目录名称
 cp ~/data.txt .
 mv data.txt hexdump_data
 ```
-
 ![image-20231207212925163](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/image-20231207212925163.png)
-
-
-
 $xxd~<input\_file>~<output\_file>$ 可以创建十六进制转储
-
 $-r$ 可以恢复十六进制传储
+....
+

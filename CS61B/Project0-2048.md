@@ -106,7 +106,6 @@ public static boolean maxTileExists(Board b) {
 }
 ```
 
-
 ### atLeastOneMoveExists
 ```java
 /**  

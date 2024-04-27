@@ -1,8 +1,13 @@
 {
   "accentColor": "",
   "theme": "moonstone",
-  "textFontFamily": "Comic Sans MS",
-  "cssTheme": "Obsidian Nord",
-  "baseFontSize": 20,
-  "baseFontSizeAction": true
+  "textFontFamily": "LXGW WenKai GB Screen",
+  "cssTheme": "Blue Topaz",
+  "baseFontSize": 21,
+  "baseFontSizeAction": true,
+  "interfaceFontFamily": "LXGW WenKai GB Screen",
+  "monospaceFontFamily": "ComicShannsMono Nerd Font Mono",
+  "enabledCssSnippets": [
+    "page-style"
+  ]
 }
