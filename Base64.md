@@ -1,7 +1,5 @@
 # $Base64$ 编码
-
 [Wiki](https://en.wikipedia.org/wiki/Base64)
-
 ![base64编码表](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/image-20240121092628109.png)
 
 $Base64$ 用 $6$ 位表示

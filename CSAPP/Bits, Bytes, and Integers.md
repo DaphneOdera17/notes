@@ -1,5 +1,5 @@
 # CSAPP | Bits, Bytes, and Integers
-## Great Reality #1
+## Great Reality
 ### **Ints are not Integers, Floats are not Reals**
 对于 (x + y) + z = x + (y + z)，无符号整形和有符号整形是成立的。
 但是对于浮点数, (1e20 + -1e20) + 3.14 -> 3.14，而 1.e20 + (-1e20 + 3.14) = 0
@@ -245,4 +245,62 @@ int iy = (int) y;
  1101
 +1011
 10000 -> 0 负溢出
+## 位运算
+移位指令比乘法指令花的时间更少。
+$u << k$ 相当于 $u \times 2^k$
+$u >> k$ 相当于 $\lfloor {u / 2^k} \rfloor$
+前面介绍过算数右移与逻辑右移。算数右移**可以保持符号位**。例如 1010 为 -6，算数右移 1 位，则为 1101 为 -3。但是此时如果再右移 1 位，得到 1110 为 -2。结果出现问题。
+特别的，对于负数的除法，如果需要右移 $k$ 位，我们需要先加上偏移量 $2^k - 1$。
+1101 + 1 = 1110 此时再右移 1 位，得到 1111 为 -1。
+## 正数变负数
+$x -> -x$ 需要对所有位取反，再 + 1。
+0101 -> 5
+1010 + 1 = 1011 -> -5
+## 使用 Unsigned 一些方式
+```c
+unsigned i;
+for(i = cnt - 2; i < cnt; i --)
+	a[i] += a[i + 1];
+```
+Better Version:
+```c
+size_t i;
+for(i = cnt - 2; i < cnt; i --)
+	a[i] += a[i + 1];
+/*
+1. Data type size_t defined as unsigned value with length = word size
+2. Code will work even if cnt = UMax
+*/
+```
+然而，当 cnt 为 signed 并且小于 0 时。会有问题。cnt 会被转换为无符号数，就会变得非常大，导致无限循环。
+## 大端序和小端序
+#### Big Endian
+高位字节存入低地址，低位字节存入高地址。
+![](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240430134050.png)
+上图从左往右 01234567
+#### Little Endian
+低位字节存入低地址，高位字节存入高地址。
+![](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240430134057.png)
+从右往左 01234567
+![](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240430134509.png)
+## 字符串
+字符串以 null 结尾，也就是 '0'
+```c
+char S[6] = '18213';
+```
+字符 '0' 为 0x30，数字字符 i 为 0x30 + i
+对于字符串数组来说，大端法和小端法存储没有区别。因为字符是一个字节一个字节存储，而每个都是一个整体。
+![](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240430182303.png)
+> [!NOTE]
+> 例如对于 0x12345678 来说，这是一个整体，0x12 是整体的高位，0x78 是整体的低位，存储就是 0x78 0x56 0x34 0x12。而对于字符数组，内部组织形式是一个字节一个字节，数组相当于是 0x12 0x34 0x56 0x78，每个字符是一个整体。
 
+## 易错
+1. 如果 x < 0, 那么 ((x * 2) < 0) 吗？ 
+	错误，因为可能会负溢出，x * 2 可能会是一个正数。
+2. 如果一个数 x，x & 7 == 7，也就是最低的 3 位为 111，如果 (x << 30) 那么结果 < 0。
+3. Is ux > -1? 错的。无符号数和有符号数作比较，有符号数被隐式转换为无符号数。-1 就会被转换为 UMax。
+4. 如果 x > y，那么 -x < -y 一定成立吗？
+	错误的，因为如果 y 为 TMin，我们直到 $|TMin| = TMax + 1$。对 TMin 取相反数，也就是 TMin 的位取反再 + 1，那就变成 TMax + 1，发生正溢出。又变回了 TMin。
+5. x >= 0 那么 -x <= 0 吗？ 正确的
+6. x <= 0 那么 -x >= 0 吗？ 错误的，比如 TMin。
+	

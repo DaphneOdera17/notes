@@ -1,3 +1,4 @@
+# hexo魔改 | 添加 Valine 评论系统
 在 LeanCloud 注册一个账号并登录 https://console.leancloud.cn/apps
 ![image.png](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240402204003.png)
 
@@ -10,7 +11,7 @@
 以 butterfly 为例
 先将 Valine 启用
 ![image.png](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240402204420.png)
-再在他下面找到 valine 的配置项
+再在他下面找到 valine 的配置项hexo魔改 | 添加旋转小风车
 将上面的 AppID、AppKey、服务器地址 分别填入 appID, appKey, serverURL
 ![image.png](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240402204543.png)
 保存之后

@@ -8,13 +8,12 @@ cd ~
 ls -a 
 vim .vimrc
 ```
-
+在里面添加：
 ```
 set tabstop=4
 set shiftwidth=4
 set number
 ```
-
 
 ```shell
 setlocal noswapfile " 不要生成swap文件
