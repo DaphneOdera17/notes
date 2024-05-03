@@ -57,3 +57,9 @@ git clone git@github.com:...
 ```
 
 即可
+
+记得在系统里配置 github 邮箱和用户名
+```shell
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+```

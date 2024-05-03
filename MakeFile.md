@@ -8,8 +8,7 @@ int main()
 	return 0;
 }
 ```
-
-再它的目录下编写一个 $Makefile$ 文件
+在它的目录下编写一个 $Makefile$ 文件
 ```makefile
 hello:hello.c
 	gcc hello.c -o hello

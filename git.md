@@ -18,43 +18,43 @@ git pull
 
 列出所有本地分支
 
-```
+```shell
 git branch 
 ```
 
 列出所有远程分支
 
-```
+```shell
 git branch -r
 ```
 
 新建一个分支，但是依旧停留在当前分支
 
-```
+```shell
 git branch [branch-name]
 ```
 
 新建一个分支，并且切换到该分支
 
-```
+```shell
 git checkout -b [branch]
 ```
 
 合并指定分支到当前分支
 
-```
+```shell
 git merge [branch]
 ```
 
 删除分支
 
-```
+```shell
 git branch -d [branch-name]
 ```
 
 删除远程分支
 
-```
+```shell
 git push origin --delete [branch-name]
 git branch -dr [remote/branch]
 ```

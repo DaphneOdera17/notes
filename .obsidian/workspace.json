@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "d84bafdf1fb7e429",
+        "id": "d4f9130b5c6ea845",
         "type": "tabs",
         "children": [
           {
-            "id": "b2ecd62f4077cadf",
+            "id": "2610ca6566f1cc50",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CSAPP/P1.计算机系统漫游.md",
+                "file": "VsCode/更改首页Logo.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -65,13 +65,25 @@
               "type": "bookmarks",
               "state": {}
             }
+          },
+          {
+            "id": "b2ecd62f4077cadf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CSAPP/P1.计算机系统漫游.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 202.49999618530273,
-    "collapsed": true
+    "width": 202.49999618530273
   },
   "right": {
     "id": "4f69a03cb22f4551",
@@ -98,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CSAPP/P1.计算机系统漫游.md",
+                "file": "VsCode/更改首页Logo.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CSAPP/P1.计算机系统漫游.md",
+                "file": "VsCode/更改首页Logo.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CSAPP/P1.计算机系统漫游.md"
+                "file": "VsCode/更改首页Logo.md"
               }
             }
           },
@@ -148,8 +160,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 204.5,
-    "collapsed": true
+    "width": 204.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -163,35 +174,36 @@
       "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "b2ecd62f4077cadf",
+  "active": "2610ca6566f1cc50",
   "lastOpenFiles": [
-    "CSAPP/Bits, Bytes, and Integers.md",
-    "CSAPP/P1.计算机系统漫游.md",
     "OpenCV/OpenCV 入门.md",
-    "问题解决实录 Failed building wheel for matplotlib.md",
-    "OpenCV/OpenCV 配置.md",
-    "Docker/Docker 入门.md",
-    "Linux/Linux 查看系统信息.md",
-    "Excalidraw/绘图.md",
-    "用户缓存文件.md",
-    "解释器与编译器.md",
-    "Rust/Rust 的安装与配置.md",
-    "Base64.md",
-    "Acryple适配指南.md",
-    "English.md",
-    "git.md",
-    "GDB.md",
-    "Git Bash.md",
-    "Linux/tmux.md",
-    "Linux/Ubuntu 联网图标失效.md",
-    "Linux/Ubuntu 22.04 LTS 安装.md",
-    "Linux/Temporary failure resolving 'mirrors.ustc.edu.cn'.md",
+    "VsCode/更改首页Logo.md",
+    "VsCode",
     "Linux/Ubuntu下的Vscode配置.md",
-    "Linux/vim 配置.md",
-    "hexo/hexo文章封面图和顶部图.md",
-    "Linux/debian.md",
-    "hexo/hexo Valine 评论.md",
+    "Linux/VM 虚拟机开启摄像头.md",
+    "Machine Learning/Regression with multiple input variables.md",
+    "Docker/Docker 入门.md",
+    "Excalidraw/绘图.md",
+    "Algorithm/LeetCode/两数之和.md",
+    "Bandit/Bandit.md",
+    "操作系统/C语言机制.md",
+    "南京大学PA/PA1.md",
+    "一生一芯/从C语言到二进制程序.md",
+    "一生一芯/Linux基础教程.md",
+    "Deep Learning/Deep Learning for Computer Vision/Lec2.md",
+    "github.md",
+    "LateX.md",
+    "LazyVim.md",
+    "MakeFile.md",
+    "README.md",
     "Pasted Image 20240428211237_485.png",
+    "git.md",
+    "OpenCV/OpenCV 配置.md",
+    "OpenCV/OpenCV 安装.md",
+    "一生一芯/状态机.md",
+    "Algorithm/动态规划/背包问题.md",
+    "Algorithm/动态规划/区间DP.md",
+    "Algorithm/动态规划/数位统计DP.md",
     "Excalidraw",
     "Docker",
     "OpenCV",
@@ -202,7 +214,6 @@
     "大创/农业组",
     "大创",
     "CSAPP",
-    "一生一芯",
-    "Deep Learning/Deep Learning for Computer Vision"
+    "一生一芯"
   ]
 }
