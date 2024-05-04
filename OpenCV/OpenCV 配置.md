@@ -40,6 +40,5 @@ https://stackoverflow.com/questions/71799459/undefined-reference-to-cvmatmat
 ## Vscode: undefined symbol: __libc_pthread_init, version GLIBC_PRIVATE
 在 vscode 下 make 之后运行
 
-
 视频教学：
 https://www.youtube.com/watch?v=Nn5OfJjBGmg

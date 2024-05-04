@@ -1,2 +1,3 @@
 # notes
-🥸studying notes, such as algorithm, hexo, git and so on
+记录了个人的 CS 学习。
+

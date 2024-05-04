@@ -33,3 +33,8 @@ Makefile 的编写规则:
 	    用于生成目标文件的命令序列   **# 注意开头的tab, 而不是空格**
 
 .PHONY: clean 用于指示 **clean 是一个伪目标**
+
+### 程序的编译
+将源代码编译为中间代码文件。例如 Windows 系统下的 .obj 文件，Linux 系统下的 .o 文件(Object File)。
+### 程序的链接
+将大量 Object File 合成可执行文件的过程
