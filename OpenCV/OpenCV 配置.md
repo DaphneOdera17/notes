@@ -1,7 +1,7 @@
 # OpenCV | 逆天坑
 笔者亲身经历。网上 OpenCV 相关教程太多，但是发现会有漏洞，然后就折腾了半天。。
 ## 安装 libjasper-dev 出错
-$Unable to locate package$
+$Unable~ ~to~ ~locate~ ~package$
 输入：
 ```shell
 sudo add-apt-repository "deb http://security.ubuntu.com/ubuntu xenial-security main"

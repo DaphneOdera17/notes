@@ -1,23 +1,18 @@
 {
   "main": {
-    "id": "b5163526e1ce1eca",
+    "id": "06f2df19bcc7df3f",
     "type": "split",
     "children": [
       {
-        "id": "add47cd34b6e579f",
+        "id": "6ec1467aa02d8feb",
         "type": "tabs",
         "children": [
           {
-            "id": "5c7339bf91d573c7",
+            "id": "39a7c58a8ab8485f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "README.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -26,15 +21,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "87abea4357602c85",
+    "id": "1cc94ec547d1a0eb",
     "type": "split",
     "children": [
       {
-        "id": "cebd8af3ea957ba4",
+        "id": "271a9fa7969e93a2",
         "type": "tabs",
         "children": [
           {
-            "id": "2d6239cfb0f29224",
+            "id": "5cbd9cb58670f642",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -44,12 +39,12 @@
             }
           },
           {
-            "id": "0c49acc34e380b15",
+            "id": "d7820c001def65a8",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#excalidraw",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -59,42 +54,56 @@
             }
           },
           {
-            "id": "d4d72153462b0e4d",
+            "id": "c3fe5e0130b91575",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
               "state": {}
-            }
-          },
-          {
-            "id": "b2ecd62f4077cadf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CSAPP/P1.计算机系统漫游.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 202.49999618530273
+    "width": 250.49999618530273
   },
   "right": {
-    "id": "4f69a03cb22f4551",
+    "id": "3b6637740bb3b09a",
     "type": "split",
     "children": [
       {
-        "id": "cc3c0095900504b6",
+        "id": "32aab566790f1e99",
         "type": "tabs",
         "children": [
           {
-            "id": "89fb980a22a3887b",
+            "id": "ad0be04fcbec0e8d",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": true,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              }
+            }
+          },
+          {
+            "id": "a22823cd33ff3ceb",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "415ac69cf4ce4d5d",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -105,46 +114,7 @@
             }
           },
           {
-            "id": "37b0578c729db5d4",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "README.md",
-                "collapseAll": true,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": false
-              }
-            }
-          },
-          {
-            "id": "252aa158cb07c0ff",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "README.md",
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
-            "id": "b7b610e1536477fc",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "README.md"
-              }
-            }
-          },
-          {
-            "id": "2abeb4f3b36838af",
+            "id": "9f4eecdd38517277",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -154,13 +124,21 @@
                 "searchQuery": ""
               }
             }
+          },
+          {
+            "id": "2f67d12b64ceb961",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 204.5
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -170,50 +148,43 @@
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "obsidian-excalidraw-plugin:新建绘图文件": false,
-      "markdown-importer:打开 Markdown 格式转换器": false
+      "markdown-importer:打开 Markdown 格式转换器": false,
+      "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "5c7339bf91d573c7",
+  "active": "39a7c58a8ab8485f",
   "lastOpenFiles": [
-    "MakeFile.md",
-    "OpenCV/OpenCV 入门.md",
-    "OpenCV/OpenCV 文件扫描.md",
-    "OpenCV/OpenCV 配置.md",
-    "Linux/VMware 虚拟机开启摄像头.md",
-    "OpenCV/OpenCV 虚拟绘画.md",
-    "OpenCV/OpenCV 安装.md",
-    "Docker/Docker 入门.md",
-    "VsCode/更改首页Logo.md",
-    "VsCode",
-    "Linux/Ubuntu下的Vscode配置.md",
-    "Machine Learning/Regression with multiple input variables.md",
-    "Excalidraw/绘图.md",
-    "Algorithm/LeetCode/两数之和.md",
-    "Bandit/Bandit.md",
-    "操作系统/C语言机制.md",
-    "南京大学PA/PA1.md",
-    "一生一芯/从C语言到二进制程序.md",
-    "一生一芯/Linux基础教程.md",
-    "Deep Learning/Deep Learning for Computer Vision/Lec2.md",
-    "github.md",
+    "科普向/Base64.md",
+    "科普向",
+    "MakeFile/MakeFile.md",
+    "XV6.md",
+    "MakeFile",
+    "Linux/LazyVim.md",
     "LateX.md",
-    "LazyVim.md",
+    "GDB.md",
+    "English.md",
+    "一些快捷键.md",
+    "hexo/Acryple适配指南.md",
     "README.md",
-    "Pasted Image 20240428211237_485.png",
-    "git.md",
-    "一生一芯/状态机.md",
-    "Algorithm/动态规划/背包问题.md",
-    "Excalidraw",
-    "Docker",
-    "OpenCV",
+    "Git/Git Bash.md",
+    "CS61C/lec5.md",
+    "Git",
+    "CS61C/lec2.md",
+    "CS61C/lec1.md",
+    "CS61C/lec3.md",
+    "CS61C/lec4.md",
+    "南京大学PA/PA0-环境的配置.md",
+    "南京大学PA/PA1.md",
+    "Linux/Ubuntu 22.04 LTS 安装.md",
+    "CSAPP/Bits, Bytes, and Integers.md",
+    "CSAPP/Floating Point.md",
+    "Linux/重定向.md",
+    "问题解决实录/问题解决实录 Failed building wheel for matplotlib.md",
+    "问题解决实录",
+    "用户缓存文件.md",
+    "Linux/Linux下Clash配置.md",
     "未命名.canvas",
-    "Machine Learning",
-    "Pasted Image 20240416142654_677.png",
-    "Bandit",
-    "大创/农业组",
-    "大创",
-    "CSAPP",
-    "一生一芯"
+    "Nand2tetris",
+    "CS61C"
   ]
 }

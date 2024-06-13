@@ -1,5 +1,4 @@
 https://blog.csdn.net/Javascript_tsj/article/details/127163683
-
 # $static~instance$
 ```java
 class Book {

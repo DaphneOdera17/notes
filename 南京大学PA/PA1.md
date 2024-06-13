@@ -256,64 +256,14 @@ layout split
 ![image.png](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240402165255.png)
 #### GDB常用指令
 ```shell
-gdb  [file] //对具有调试信息的文件启动gdb调试
-quit //退出调试
-set args .. .. .. //对调试程序设置参数
-show args //获取参数
-show list/listsize //获取当前显示行数
-set list/listsize 行数 //设置每次显示行数
-set inferior-tty 进程id//设置不同进程的调试
-info inferiors //显示当前存在的所有进程和id
-show nferior-tty //显示当前调试进程
-
-l/list //从默认位置显示
-l/list 行号 //将指定行放到中间显示
-l/list 函数名 //将指定函数放到中间显示
-
-//查看非当前文件的代码
-list/l 文件名:行号
-list/ l文件名:函数名
-
-
-//设置断点
-b/break 行号
-b/break 函数名
-b/break 文件：行号
-b/break 文件：函数名
-
-i/info b/break //查看断点信息
-d/del/delete 断点编号//删除断点
-dis/disable 断点编号 //设置断点无效
-ena/enable 断点编号 //设置断点生效
-b/break 断点编号 if 条件 //设置条件断点
-
-//调试指令
-//运行
-start //程序停在第一行
-run //遇到断点才停
-
-//继续运行，遇到下一个断点停止
-c/continue
-
-//向下执行一行代码，不会进入函数
-n/next
-
-//向下单步调试
-s/step
-
-//跳出函数体
-finish
-
-//变量操作
-p/print 变量名 //打印变量值
-ptype 变量名 //打印变量类型
-display 变量名 //自动打印指定变量
-i/info display //查看自动变量信息
-undisplay 编号 //删除自动变量
-
-//循环相关
-set var 变量名=变量值
-until //跳出循环（前提是循环内没有断点了）
+b main   // 在 main 函数处添加断点
+run [args] // 运行程序 run 123
+s        // 进入程序
+n        // 执行下一行
+c        // 继续程序
+p 变量名  // 打印变量，也可以是表达式 p 1+2
+info locals // 查看当前函数里的所有变量对应的值
+quit     // 退出 gdb
 ```
 
 ### 为 NEMU 编译添加 GDB 调试信息

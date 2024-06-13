@@ -96,6 +96,10 @@
   border-radius: 4px;
 }
 
+.mm-node .mm-node-content img {
+   min-width:50px;
+}
+
 .mm-node.node-wireFrame .mm-node-content {
   border-radius: 6px;
   border-bottom-left-radius: 0;
@@ -132,6 +136,9 @@
 .mm-node-edit>ol,
 .mm-node-edit>ul {
   padding-left: 20px;
+}
+.mm-node-edit audio{
+min-width:300px
 }
 
 /* 笔记渲染表格 */
@@ -2028,4 +2035,57 @@ th {
 .mm-node-cover:hover {
   opacity: 0;
   background-color: transparent;
+}
+
+/* 联系线两边的标志 */
+
+.mm-assist-lineMarker span {
+  display:inline-block;
+}
+
+.mm-assist-lineMarker>span {
+ width: 30px;
+ cursor: pointer;
+}
+
+.mm-assist-lineMarker>span.mm-circle .shape {
+  width: 10px;
+  height: 10px;
+  background-color: #817f7f;
+  border-radius: 50%;
+}
+
+.mm-sline .shape {
+  width: 2px;
+  height: 10px;
+  background-color: #817f7f;
+}
+ span.mm-sline .line {
+  width: 20px;
+}
+
+.mm-rect .shape {
+  width: 10px;
+  height: 10px;
+  background-color: #817f7f;
+}
+
+.mm-arrow .shape {
+  width: 0;
+  height: 0;
+  background-color: #817f7f;
+  border-top: 5px solid transparent;
+  border-left: 10px solid #817f7f;
+  border-bottom: 5px solid transparent;
+  background: transparent !important;
+}
+
+.mm-arrow1 .shape {
+  width: 0;
+  height: 0;
+  background-color: #817f7f;
+  border-top: 5px solid transparent;
+  border-right: 10px solid #817f7f;
+  border-bottom: 5px solid transparent;
+  background: transparent !important;
 }

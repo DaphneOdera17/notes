@@ -125,11 +125,11 @@ sudo apt-get upgrade
 ![](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240427214240.png)
 调整字体大小
 ![](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240427214332.png)
-#### 更改终端大小
+### 更改终端大小
 更改 columns 和 rows 即可（需要重启终端才可生效）
 ![](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240427214431.png)
 
-### 安装必须工具
+## 安装必须工具
 ```shell
 sudo apt install build-essential
 ```
@@ -138,3 +138,34 @@ sudo apt install build-essential
 ```shell
 sudo apt install git
 ```
+## 安装中文输入法
+### 安装中文语言包
+先在终端输入：
+```shell
+sudo apt-get remove thunderbird
+sudo apt-get install language-pack-zh-han*
+```
+打开设置进入 Region & Language。选择 Manage installed Languages。
+![](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240524225230.png)
+不过会出现此报错，忽略即可。
+![](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240524225505.png)
+![](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240524225608.png)
+找到 Chinese 双击选择并应用。
+![](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240524225641.png)
+等待系统安装完中文语言包，我们进入下个阶段。
+### 安装中文输入法
+先在终端输入
+```shell
+sudo apt-get install ibus-pinyin
+```
+进入设置。
+
+![](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240524224319.png)
+
+![](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240524224343.png)
+![](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240524225816.png)
+如果此处没有这个选项，可能需要重启。
+![](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240524225832.png)
+**$\textcolor{red}{添加后记得重启，否则可能无效!!!}$**
+之后即可正常使用中文输入法。
+按 win + 空格键 可以切换中英文输入法。

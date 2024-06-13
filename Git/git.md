@@ -73,3 +73,20 @@ git branch -dr [remote/branch]
 git pull origin main --allow-unrelated-histories
 ```
 
+## gitignore
+忽略根目录下的文件夹 CMakeFiles
+忽略 build 文件夹下的 CMakeCache.txt
+忽略根目录下的 .vscode 文件夹
+```txt
+build/CMakeFiles/
+build/CMakeCache.txt
+.vscode
+```
+### 清空缓存
+```shell
+git rm -r --cached .
+git add .
+git commit -m "update"
+git push
+
+```

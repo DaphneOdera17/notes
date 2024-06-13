@@ -2,8 +2,6 @@
 
 $Trie$ 树是高效地存储和查找字符串集合的数据结构
 
-
-
 ```cpp
 #include<bits/stdc++.h>
 
@@ -63,11 +61,7 @@ int main()
 }
 ```
 
-
-
 ## 最大异或对
-
-
 
 ```cpp
 #include<bits/stdc++.h>

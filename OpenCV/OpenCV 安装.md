@@ -1,6 +1,5 @@
 # Ubuntu 22.04 安装 OpenCV 4.7.0 C++ and Python
 ## 镜像源的替换
-
 ```shell
 sudo apt-get update
 sudo apt-get upgrade
