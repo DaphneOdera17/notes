@@ -4,15 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "6ec1467aa02d8feb",
+        "id": "3f1900fa64368456",
         "type": "tabs",
         "children": [
           {
-            "id": "39a7c58a8ab8485f",
+            "id": "d0881a5a75045396",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "问题解决实录/未命名.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
             }
           }
         ]
@@ -65,7 +70,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 250.49999618530273
+    "width": 200
   },
   "right": {
     "id": "3b6637740bb3b09a",
@@ -81,6 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "问题解决实录/未命名.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -97,6 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "问题解决实录/未命名.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -130,7 +137,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "问题解决实录/未命名.md"
+              }
             }
           }
         ],
@@ -149,40 +158,47 @@
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
       "markdown-importer:打开 Markdown 格式转换器": false,
-      "obsidian-excalidraw-plugin:新建绘图文件": false
+      "obsidian-excalidraw-plugin:新建绘图文件": false,
+      "media-extended:Open media": false
     }
   },
-  "active": "39a7c58a8ab8485f",
+  "active": "d0881a5a75045396",
   "lastOpenFiles": [
-    "科普向/Base64.md",
-    "科普向",
-    "MakeFile/MakeFile.md",
-    "XV6.md",
-    "MakeFile",
-    "Linux/LazyVim.md",
-    "LateX.md",
-    "GDB.md",
-    "English.md",
-    "一些快捷键.md",
-    "hexo/Acryple适配指南.md",
-    "README.md",
-    "Git/Git Bash.md",
-    "CS61C/lec5.md",
-    "Git",
-    "CS61C/lec2.md",
-    "CS61C/lec1.md",
-    "CS61C/lec3.md",
-    "CS61C/lec4.md",
-    "南京大学PA/PA0-环境的配置.md",
-    "南京大学PA/PA1.md",
-    "Linux/Ubuntu 22.04 LTS 安装.md",
-    "CSAPP/Bits, Bytes, and Integers.md",
-    "CSAPP/Floating Point.md",
-    "Linux/重定向.md",
+    "问题解决实录/问题解决实录 Anaconda Navigator 启动无反应.md",
     "问题解决实录/问题解决实录 Failed building wheel for matplotlib.md",
-    "问题解决实录",
-    "用户缓存文件.md",
+    "问题解决实录/未命名.md",
+    "CS61C/Lec11.md",
+    "Excalidraw/绘图.md",
+    "CS61C/lec10.md",
+    "Linux/Debian 安装最新版 neovim.md",
+    "CS61C/Venus.md",
+    "CS61C/lec9.md",
+    "CS61C/lec8.md",
+    "VsCode/更改首页Logo.md",
+    "CS61C/lec6.md",
+    "CS61C/lec5.md",
+    "CS61C/lec4.md",
+    "CS61C/lec7.md",
+    "Git/git.md",
+    "Git/Git Bash.md",
+    "Algorithm/KMP.md",
+    "CS61C/lec3.md",
+    "CS61C/lec1.md",
+    "CS61C/lec2.md",
+    "南京大学PA/PA1.md",
+    "南京大学PA/PA0-环境的配置.md",
     "Linux/Linux下Clash配置.md",
+    "Linux/Linux 查看系统信息.md",
+    "Linux/LazyVim.md",
+    "Django",
+    "Vue",
+    "Pasted Image 20240614224622_112.png",
+    "最小生成树(Kruskal(克鲁斯卡尔)和Prim(普里姆))算法动画演示PT6M12.452S.webp",
+    "Algorithm/树",
+    "科普向",
+    "MakeFile",
+    "Git",
+    "问题解决实录",
     "未命名.canvas",
     "Nand2tetris",
     "CS61C"
