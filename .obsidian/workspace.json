@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "3f1900fa64368456",
+        "id": "5754a8ff5c81775b",
         "type": "tabs",
         "children": [
           {
-            "id": "d0881a5a75045396",
+            "id": "9e209bc7d0c9001e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "问题解决实录/未命名.md",
+                "file": "CS61B/Project0-2048.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "问题解决实录/未命名.md",
+                "file": "CS61B/Project0-2048.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "问题解决实录/未命名.md",
+                "file": "CS61B/Project0-2048.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "问题解决实录/未命名.md"
+                "file": "CS61B/Project0-2048.md"
               }
             }
           }
@@ -147,7 +147,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -162,34 +163,35 @@
       "media-extended:Open media": false
     }
   },
-  "active": "d0881a5a75045396",
+  "active": "9e209bc7d0c9001e",
   "lastOpenFiles": [
-    "问题解决实录/问题解决实录 Anaconda Navigator 启动无反应.md",
-    "问题解决实录/问题解决实录 Failed building wheel for matplotlib.md",
-    "问题解决实录/未命名.md",
-    "CS61C/Lec11.md",
-    "Excalidraw/绘图.md",
-    "CS61C/lec10.md",
-    "Linux/Debian 安装最新版 neovim.md",
-    "CS61C/Venus.md",
-    "CS61C/lec9.md",
-    "CS61C/lec8.md",
-    "VsCode/更改首页Logo.md",
-    "CS61C/lec6.md",
-    "CS61C/lec5.md",
-    "CS61C/lec4.md",
-    "CS61C/lec7.md",
-    "Git/git.md",
-    "Git/Git Bash.md",
-    "Algorithm/KMP.md",
-    "CS61C/lec3.md",
-    "CS61C/lec1.md",
+    "CS61B/Project 2.md",
+    "CS61B/lab2 遇到的一些问题.md",
+    "CS61B/lab6.md",
+    "CS61B/Project0-2048.md",
+    "CS61B/static.md",
+    "CS61B/Project1.md",
+    "Linux/Debian Vscode 配置.md",
+    "Linux/debian.md",
+    "Linux/Debian 更换桌面.md",
+    "hexo/hexo 修改指针样式.md",
+    "hexo/hexo 修改文章数量.md",
+    "hexo/hexo 修改首页卡片样式.md",
+    "hexo/hexo 添加 aplayer 播放器.md",
+    "hexo/hexo主题.md",
+    "hexo/hexo Valine 评论.md",
+    "hexo/hexo s-FATAL Permission denied. You can't use port 4000..md",
+    "hexo/hexo 文章封面图和顶部图.md",
+    "hexo/hexo 调节页面大小.md",
+    "一生一芯/状态机.md",
+    "一生一芯/Linux基础教程.md",
     "CS61C/lec2.md",
-    "南京大学PA/PA1.md",
-    "南京大学PA/PA0-环境的配置.md",
-    "Linux/Linux下Clash配置.md",
-    "Linux/Linux 查看系统信息.md",
-    "Linux/LazyVim.md",
+    "css/定位.md",
+    "CS61C/lec1.md",
+    "CS61C/lec8.md",
+    "CS61C/lec3.md",
+    "CS61C/lec4.md",
+    "未命名.canvas",
     "Django",
     "Vue",
     "Pasted Image 20240614224622_112.png",
@@ -199,7 +201,6 @@
     "MakeFile",
     "Git",
     "问题解决实录",
-    "未命名.canvas",
     "Nand2tetris",
     "CS61C"
   ]
