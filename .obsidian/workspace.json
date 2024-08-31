@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "5754a8ff5c81775b",
+        "id": "5199682a2e7095a3",
         "type": "tabs",
         "children": [
           {
-            "id": "9e209bc7d0c9001e",
+            "id": "8d2c42fc435e187b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CS61B/Project0-2048.md",
+                "file": "CS61B/lab6.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CS61B/Project0-2048.md",
+                "file": "CS61B/lab6.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CS61B/Project0-2048.md",
+                "file": "CS61B/lab6.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CS61B/Project0-2048.md"
+                "file": "CS61B/lab6.md"
               }
             }
           }
@@ -163,34 +163,36 @@
       "media-extended:Open media": false
     }
   },
-  "active": "9e209bc7d0c9001e",
+  "active": "8d2c42fc435e187b",
   "lastOpenFiles": [
-    "CS61B/Project 2.md",
     "CS61B/lab2 遇到的一些问题.md",
-    "CS61B/lab6.md",
+    "Linux/tmux.md",
+    "Machine Learning/K-means.md",
+    "Machine Learning/支持向量机.md",
+    "Machine Learning/贝叶斯决策.md",
+    "Machine Learning/决策树.md",
+    "生成项目依赖.md",
+    "Docker/DockerFile.md",
+    "Machine Learning/梯度下降算法.md",
+    "Machine Learning/欠拟合与过拟合.md",
+    "Machine Learning/模型评价指标.md",
+    "Machine Learning/模型保存与读取.md",
+    "Machine Learning/逻辑回归.md",
+    "Machine Learning/交叉验证.md",
+    "Machine Learning/专业术语.md",
+    "Machine Learning/最小二乘法.md",
+    "Machine Learning/线性回归.md",
+    "Machine Learning/正则化.md",
+    "Jupyter/一些快捷键.md",
+    "LateX.md",
+    "Machine Learning/Regression with multiple input variables.md",
+    "Machine Learning/Supervised learning with Unsupervised Learning.md",
+    "CS61B/Project 2.md",
     "CS61B/Project0-2048.md",
-    "CS61B/static.md",
-    "CS61B/Project1.md",
-    "Linux/Debian Vscode 配置.md",
-    "Linux/debian.md",
-    "Linux/Debian 更换桌面.md",
-    "hexo/hexo 修改指针样式.md",
-    "hexo/hexo 修改文章数量.md",
-    "hexo/hexo 修改首页卡片样式.md",
-    "hexo/hexo 添加 aplayer 播放器.md",
-    "hexo/hexo主题.md",
-    "hexo/hexo Valine 评论.md",
-    "hexo/hexo s-FATAL Permission denied. You can't use port 4000..md",
-    "hexo/hexo 文章封面图和顶部图.md",
-    "hexo/hexo 调节页面大小.md",
-    "一生一芯/状态机.md",
-    "一生一芯/Linux基础教程.md",
-    "CS61C/lec2.md",
-    "css/定位.md",
-    "CS61C/lec1.md",
-    "CS61C/lec8.md",
-    "CS61C/lec3.md",
-    "CS61C/lec4.md",
+    "Java/一些易错.md",
+    "大创/Neo4j.md",
+    "Java",
+    "Jupyter",
     "未命名.canvas",
     "Django",
     "Vue",
@@ -201,7 +203,6 @@
     "MakeFile",
     "Git",
     "问题解决实录",
-    "Nand2tetris",
-    "CS61C"
+    "Nand2tetris"
   ]
 }
