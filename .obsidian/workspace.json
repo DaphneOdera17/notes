@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CS61B/lab6.md",
+                "file": "Linux/curl Failed.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CS61B/lab6.md",
+                "file": "Linux/curl Failed.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CS61B/lab6.md",
+                "file": "Linux/curl Failed.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CS61B/lab6.md"
+                "file": "Linux/curl Failed.md"
               }
             }
           }
@@ -165,8 +165,23 @@
   },
   "active": "8d2c42fc435e187b",
   "lastOpenFiles": [
-    "CS61B/lab2 遇到的一些问题.md",
+    "Linux/github-ssh.md",
+    "Linux/Debian Vscode 配置.md",
+    "Linux/Fix APT Error (Download is performed unsandboxed as root).md",
+    "Linux/curl Failed.md",
+    "Linux/debian.md",
+    "Linux/Debian 安装最新版 neovim.md",
+    "Linux/Debian 更换桌面.md",
+    "Linux/LazyVim.md",
+    "Linux/Linux下Clash配置.md",
+    "Linux/Temporary failure resolving 'mirrors.ustc.edu.cn'.md",
+    "Linux/Ubuntu 22.04 LTS 安装.md",
+    "Linux/Ubuntu下的Vscode配置.md",
+    "Linux/Linux 的文件权限与目录配置.md",
     "Linux/tmux.md",
+    "Linux/Linux 查看系统信息.md",
+    "CS61B/lab6.md",
+    "CS61B/lab2 遇到的一些问题.md",
     "Machine Learning/K-means.md",
     "Machine Learning/支持向量机.md",
     "Machine Learning/贝叶斯决策.md",
@@ -176,21 +191,6 @@
     "Machine Learning/梯度下降算法.md",
     "Machine Learning/欠拟合与过拟合.md",
     "Machine Learning/模型评价指标.md",
-    "Machine Learning/模型保存与读取.md",
-    "Machine Learning/逻辑回归.md",
-    "Machine Learning/交叉验证.md",
-    "Machine Learning/专业术语.md",
-    "Machine Learning/最小二乘法.md",
-    "Machine Learning/线性回归.md",
-    "Machine Learning/正则化.md",
-    "Jupyter/一些快捷键.md",
-    "LateX.md",
-    "Machine Learning/Regression with multiple input variables.md",
-    "Machine Learning/Supervised learning with Unsupervised Learning.md",
-    "CS61B/Project 2.md",
-    "CS61B/Project0-2048.md",
-    "Java/一些易错.md",
-    "大创/Neo4j.md",
     "Java",
     "Jupyter",
     "未命名.canvas",
