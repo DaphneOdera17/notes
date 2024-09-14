@@ -163,14 +163,11 @@
       "media-extended:Open media": false
     }
   },
-  "active": "72009ba35c322838",
+  "active": "5cbd9cb58670f642",
   "lastOpenFiles": [
-    "新建 文本文档.txt",
-    "问题解决实录/未命名 1.md",
-    "问题解决实录/问题解决实录 Failed building wheel for matplotlib.md",
-    "Linux/curl Failed.md",
     "问题解决实录/问题解决实录 Anaconda Navigator 启动无反应.md",
     "问题解决实录/python'pkgutil' has no attribute 'ImpImporter'.md",
+    "问题解决实录/问题解决实录 Failed building wheel for matplotlib.md",
     "OpenCV/OpenCV 安装.md",
     "Algorithm/快速幂.md",
     "Java/创建对象.md",
@@ -192,6 +189,9 @@
     "Machine Learning/专业术语.md",
     "Machine Learning/支持向量机.md",
     "Machine Learning/正则化.md",
+    "Machine Learning/欠拟合与过拟合.md",
+    "Machine Learning/模型评价指标.md",
+    "Machine Learning/交叉验证.md",
     "symbols.pdf",
     "Java",
     "Jupyter",
