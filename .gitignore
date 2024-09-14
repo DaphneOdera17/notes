@@ -1,5 +1,5 @@
-<<<<<<< HEAD
+.obsidian/
 .obsidian/*
-=======
-.obsidian/*
->>>>>>> 3867dad4735297b9909a51db01bec484114b1c73
+.obsidian/appearance.json
+.obsidian/workspace.json
+.obsidian/graph.json
