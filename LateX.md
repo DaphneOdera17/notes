@@ -3,7 +3,6 @@
 反斜杠 \\backslash $\backslash$
 梯度 \\nabla $\nabla$
 
-
 obsidian 中公式块换行
 ```lateX
 $$
@@ -12,3 +11,5 @@ $$
 \end{aligned}
 $$
 ```
+
+![[symbols.pdf]]

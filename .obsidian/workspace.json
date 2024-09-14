@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "5199682a2e7095a3",
+        "id": "fed5a01d0edc8432",
         "type": "tabs",
         "children": [
           {
-            "id": "8d2c42fc435e187b",
+            "id": "72009ba35c322838",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CS61B/lab6.md",
+                "file": "问题解决实录/问题解决实录 Failed building wheel for matplotlib.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -70,7 +70,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 269.49999618530273
   },
   "right": {
     "id": "3b6637740bb3b09a",
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CS61B/lab6.md",
+                "file": "问题解决实录/问题解决实录 Failed building wheel for matplotlib.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CS61B/lab6.md",
+                "file": "问题解决实录/问题解决实录 Failed building wheel for matplotlib.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CS61B/lab6.md"
+                "file": "问题解决实录/问题解决实录 Failed building wheel for matplotlib.md"
               }
             }
           }
@@ -163,34 +163,36 @@
       "media-extended:Open media": false
     }
   },
-  "active": "8d2c42fc435e187b",
+  "active": "5cbd9cb58670f642",
   "lastOpenFiles": [
+    "问题解决实录/问题解决实录 Anaconda Navigator 启动无反应.md",
+    "问题解决实录/python'pkgutil' has no attribute 'ImpImporter'.md",
+    "问题解决实录/问题解决实录 Failed building wheel for matplotlib.md",
+    "OpenCV/OpenCV 安装.md",
+    "Algorithm/快速幂.md",
+    "Java/创建对象.md",
+    "Java/泛型.md",
+    "CS61B/数组.md",
+    "CS61B/static.md",
+    "CS61B/Project0-2048.md",
     "CS61B/lab2 遇到的一些问题.md",
-    "Linux/tmux.md",
-    "Machine Learning/K-means.md",
+    "CS61B/Compilation.md",
+    "CS61B/lab6.md",
+    "Jupyter/一些快捷键.md",
+    "111.md",
+    "Sid Meier's Civilization VI.url",
+    "数学建模.md",
+    "Machine Learning/逻辑回归.md",
+    "Machine Learning/模型保存与读取.md",
+    "Machine Learning/线性回归.md",
+    "Machine Learning/GBDT.md",
+    "Machine Learning/专业术语.md",
     "Machine Learning/支持向量机.md",
-    "Machine Learning/贝叶斯决策.md",
-    "Machine Learning/决策树.md",
-    "生成项目依赖.md",
-    "Docker/DockerFile.md",
-    "Machine Learning/梯度下降算法.md",
+    "Machine Learning/正则化.md",
     "Machine Learning/欠拟合与过拟合.md",
     "Machine Learning/模型评价指标.md",
-    "Machine Learning/模型保存与读取.md",
-    "Machine Learning/逻辑回归.md",
     "Machine Learning/交叉验证.md",
-    "Machine Learning/专业术语.md",
-    "Machine Learning/最小二乘法.md",
-    "Machine Learning/线性回归.md",
-    "Machine Learning/正则化.md",
-    "Jupyter/一些快捷键.md",
-    "LateX.md",
-    "Machine Learning/Regression with multiple input variables.md",
-    "Machine Learning/Supervised learning with Unsupervised Learning.md",
-    "CS61B/Project 2.md",
-    "CS61B/Project0-2048.md",
-    "Java/一些易错.md",
-    "大创/Neo4j.md",
+    "symbols.pdf",
     "Java",
     "Jupyter",
     "未命名.canvas",
@@ -201,8 +203,6 @@
     "Algorithm/树",
     "科普向",
     "MakeFile",
-    "Git",
-    "问题解决实录",
-    "Nand2tetris"
+    "Git"
   ]
 }
