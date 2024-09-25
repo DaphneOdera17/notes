@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "fed5a01d0edc8432",
+        "id": "3d6203464aff5b12",
         "type": "tabs",
         "children": [
           {
-            "id": "72009ba35c322838",
+            "id": "ecb49093f6641ede",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "问题解决实录/问题解决实录 Failed building wheel for matplotlib.md",
+                "file": "Jupyter/jupyter 使用 conda 环境.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -70,7 +70,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 269.49999618530273
+    "width": 215.51103591918945
   },
   "right": {
     "id": "3b6637740bb3b09a",
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "问题解决实录/问题解决实录 Failed building wheel for matplotlib.md",
+                "file": "Jupyter/jupyter 使用 conda 环境.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "问题解决实录/问题解决实录 Failed building wheel for matplotlib.md",
+                "file": "Jupyter/jupyter 使用 conda 环境.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "问题解决实录/问题解决实录 Failed building wheel for matplotlib.md"
+                "file": "Jupyter/jupyter 使用 conda 环境.md"
               }
             }
           }
@@ -163,36 +163,36 @@
       "media-extended:Open media": false
     }
   },
-  "active": "72009ba35c322838",
+  "active": "ecb49093f6641ede",
   "lastOpenFiles": [
-    "问题解决实录/未命名 1.md",
-    "问题解决实录/问题解决实录 Failed building wheel for matplotlib.md",
-    "南京大学PA/PA0-环境的配置.md",
-    "Linux/Debian Vscode 配置.md",
-    "Linux/Fix APT Error (Download is performed unsandboxed as root).md",
-    "Linux/curl Failed.md",
-    "新建 文本文档.txt",
-    "问题解决实录/问题解决实录 Anaconda Navigator 启动无反应.md",
-    "问题解决实录/python'pkgutil' has no attribute 'ImpImporter'.md",
-    "OpenCV/OpenCV 安装.md",
-    "Algorithm/快速幂.md",
-    "Java/创建对象.md",
-    "Java/泛型.md",
-    "CS61B/数组.md",
-    "CS61B/static.md",
-    "CS61B/Project0-2048.md",
-    "CS61B/lab2 遇到的一些问题.md",
-    "CS61B/Compilation.md",
-    "CS61B/lab6.md",
+    "Java/java 基本类型.md",
+    "Jupyter/jupyter 使用 conda 环境.md",
     "Jupyter/一些快捷键.md",
-    "111.md",
+    "Excalidraw/绘图.md",
+    "GCC.md",
+    "GDB.md",
+    "Linux/github-ssh.md",
+    "一生一芯/状态机.md",
+    "一生一芯/从C语言到二进制程序.md",
+    "Django/MySQL.md",
+    "Django/项目目录.md",
+    "C/表达式.md",
+    "Docker/Docker 原理.md",
+    "Docker/Docker 入门.md",
+    "Docker/Docker 常用命令.md",
+    "Docker/DockerFile.md",
+    "hexo/gitee 无法渲染问题.md",
+    "hexo/Acryple适配指南.md",
+    "hexo/hexo 博客.md",
+    "hexo/hexo 调节页面大小.md",
+    "hexo/hexo 添加 aplayer 播放器.md",
+    "hexo/hexo 添加樱花特效.md",
+    "hexo/hexo 文章封面图和顶部图.md",
+    "hexo/hexo 修改首页卡片样式.md",
+    "hexo/hexo 修改文章数量.md",
+    "hexo/hexo 修改指针样式.md",
+    "新建 文本文档.txt",
     "Sid Meier's Civilization VI.url",
-    "数学建模.md",
-    "Machine Learning/逻辑回归.md",
-    "Machine Learning/模型保存与读取.md",
-    "Machine Learning/线性回归.md",
-    "Machine Learning/GBDT.md",
-    "Machine Learning/专业术语.md",
     "symbols.pdf",
     "Java",
     "Jupyter",
