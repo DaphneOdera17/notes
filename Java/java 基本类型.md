@@ -125,4 +125,5 @@ System.out.println(S1.charAt(2));
 ```
 charAt 传入的是索引。
 <img src="https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240915220617.png" style="zoom:70%">
-
+## 数据类型优先级
+byte,   short,   char    -->    int   -->   long   -->   float  -->  double
