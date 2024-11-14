@@ -65,6 +65,7 @@ System.out.println(S1.charAt(2));
 ```
 charAt 传入的是索引。
 <img src="https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240915220617.png" style="zoom:70%">
+
 ## Float 和 Double
 ```java
 double n1 = 3.1415926535;  
@@ -158,6 +159,4 @@ boolean 不参与自动转换
 boolean pass = true;
 int num100 = pass; // 错误，boolean 不参与类型的转换。
 ```
-
-
 

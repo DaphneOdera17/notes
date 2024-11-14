@@ -1,3 +1,4 @@
+# Rust | 安装与配置
 [Rust 官网](https://www.rust-lang.org/learn/get-started)
 
 ![](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/20240315235528.png)

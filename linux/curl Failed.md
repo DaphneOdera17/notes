@@ -1,3 +1,4 @@
+# Github | curl Failed
 curl: (7) Failed to connect to raw.githubusercontent.com port 443 after 1 ms: Connection refused
 ```shell
 sudo vim /etc/hosts

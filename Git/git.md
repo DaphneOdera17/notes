@@ -1,3 +1,4 @@
+# git | 基础教程
 
 | 命令名称                                | 作用          |
 | ----------------------------------- | ----------- |
@@ -73,8 +74,7 @@ git branch -dr [remote/branch]
 多个分支如果并行执行，就会导致我们的代码不冲突，也就是同时存在多个版本
 ![image-20231029103818384](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/image-20231029103818384.png)
 
-
-
+## fatal: refusing to merge unrelated histories
 ![image-20231208232158990](https://typora-birdy.oss-cn-guangzhou.aliyuncs.com/image-20231208232158990.png)
 
 ```shell
