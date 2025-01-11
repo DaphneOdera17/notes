@@ -6,3 +6,5 @@ $Graph~ ~Neural~ ~Networks$
 
 $MLP$ 多层感知机 (separate multilayer perceptron)
 
+
+Aggregate: 用 neighbor feature update 下一层的 hidden state
