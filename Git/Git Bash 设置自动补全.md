@@ -1,5 +1,5 @@
 
-在 github 仓库下下载git-completion.bash:
+在 github 仓库下下载 git-completion.bash:
 [git-completion](https://github.com/git/git/blob/master/contrib/completion/git-completion.bash)
 
 将文件名改为(也就是在最前面加上一个 .):

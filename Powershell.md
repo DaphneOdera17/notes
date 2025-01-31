@@ -14,3 +14,9 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 ```powershell
 New-NetFirewallRule -DisplayName "Open Port 7474" -Direction Inbound -Protocol TCP -Action Allow -LocalPort 7474
 ```
+
+## 取别名
+比如给 redis-server 取别名 redis
+```shell
+Set-Alias -Name redis -Value redis-server
+```

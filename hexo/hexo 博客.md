@@ -1,7 +1,7 @@
-# hexo 博客
 ```
 hexo new "name"
 ```
+
 ```shell
 hexo clean && hexo g && hexo d 
 ```
@@ -10,6 +10,7 @@ hexo clean && hexo g && hexo d
 ```shell
 service nginx start
 ```
+
 ```shell
 service nginx restart
 ```
